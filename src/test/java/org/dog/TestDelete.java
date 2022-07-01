@@ -29,7 +29,7 @@ public class TestDelete {
     /**
      * 根据id删除用户
      */
-    int res = userMapper.deleteById(1542759636103356417L);
+    int res = userMapper.deleteById(1542787890730270721L);
     System.out.println("result:" + res);
   }
 
