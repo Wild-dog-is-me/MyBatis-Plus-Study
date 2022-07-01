@@ -3,6 +3,8 @@ package org.dog.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.dog.entity.User;
 
+import java.util.Map;
+
 /**
  * Created with IntelliJ IDEA.
  *
@@ -12,4 +14,5 @@ import org.dog.entity.User;
 
 public interface UserMapper extends BaseMapper<User> {
 
+  Map<String, Object> selectMapById(Long id);
 }

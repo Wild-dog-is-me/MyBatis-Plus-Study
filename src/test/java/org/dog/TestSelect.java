@@ -6,7 +6,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -46,6 +49,25 @@ public class TestSelect {
   @Test
   public void testSelectThree() {
 
+    /**
+     * 多个id查询用户信息
+     */
+    List<Long> idList = Arrays.asList(1l, 2l);
+    List<User> users = userMapper.selectBatchIds(idList);
+    users.forEach(System.out::println);
+  }
+
+  @Test
+  public void testSelectFour() {
+
+    /**
+     * 根据map查询用户信息
+     */
+    Map<String, Object> map = new HashMap<>();
+    map.put("name", "张三");
+    map.put("age", 28);
+    List<User> users = userMapper.selectByMap(map);
+    users.forEach(System.out::println);
   }
 
 }
