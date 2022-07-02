@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.dog.enums.SexEnum;
 
 /**
  * Created with IntelliJ IDEA.
@@ -44,5 +45,10 @@ public class User {
    */
   @TableLogic
   private int isDelete;
+
+  /**
+   * 通过枚举类型设置性别
+   */
+  private SexEnum sexEnum;
 
 }
